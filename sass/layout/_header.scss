@@ -1,0 +1,26 @@
+.header {
+    background-color: $colour-white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 65px;
+    position: relative;
+    z-index: 10;
+
+    &__icon {
+        color: $colour-black;
+        width: 16px;
+        height: 16px;
+        display: flex;
+        align-items: start;
+    }
+
+    &__logo {
+        color: $colour-black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 35px;
+    }
+}

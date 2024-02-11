@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ohmyfood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300;1,500&
+        family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <!--header-->
+
+        <nav class="header">
+            <i class="fa-solid fa-arrow-left"></i>
+            <img class=" header__logo" src="./images/logo/ohmyfood.png" alt="Brand Logo">
+        </nav>
+        <main>
+            <img class="kitchenwest" src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                alt="Kitchen west">
+
+            <div class="menu">
+
+                <!--title-->
+
+                <div class="menu__title">
+                    <h4>Kitchen West</h4>
+                    <i class="fa-solid fa-heart heart-gradient"></i>
+                </div>
+
+                <!--starters-->
+
+                <div class="category">
+                    <h3 class="category__heading">STARTERS</h3>
+
+                    <div class="category__card">
+                        <div class="category__name">
+                            <h2>Smoked salmon</h2>
+                            <h3>With beetroot and horseradish dressing</h3>
+                        </div>
+                        <div class="category__price">
+                            <h3 class="cost">£25</h3>
+                        </div>
+                    </div>
+
+                    <div class="category__card">
+                        <div class="category__name">
+                            <h2>Ham hock terrine</h2>
+                            <h3>With piccalilli</h3>
+                        </div>
+                        <div class="category__price">
+                            <h3 class="cost">£35</h3>
+                        </div>
+                    </div>
+
+                    <div class="category__card">
+                        <div class="category__name">
+                            <h2>Poached egg</h2>
+                            <h3>With asparagus and hollandaise</h3>
+                        </div>
+                        <div class="category__price">
+                            <h3 class="cost">£20</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!--mains-->
+
+                <div class="category">
+                    <h3 class="category_heading">MAINS</h3>
+
+                    <div class="category__card">
+                        <div class="category__name">
+                            <h2>Beef fillet with herb butter</h2>
+                            <h3>Served with a vegetable medley</h3>
+                        </div>
+                        <div class="category__price">
+                            <h3 class="cost">£40</h3>
+                        </div>
+                    </div>
+
+                    <div class="category__card">
+                        <div class="category__name">
+                            <h2>Braised oxtail cottage pie</h2>
+                            <h3>With black truffle and parsnip puree</h3>
+                        </div>
+                        <div class="category__price">
+                            <h3 class="cost">£35</h3>
+                        </div>
+                    </div>
+
+                    <div class="category__card">
+                        <div class="category__name">
+                            <h2>Fillet of turbot</h2>
+                            <h3>With citrus dressing</h3>
+                        </div>
+                        <div class="category__price">
+                            <h3 class="cost">£44</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--desserts-->
+
+                <div class="category">
+                    <h3 class="category_heading">DESSERTS</h3>
+
+                    <div class="category__card">
+                        <div class="category__name">
+                            <h2>Treacle tart</h2>
+                            <h3>With Cornish clotted cream</h3>
+                        </div>
+                        <div class="category__price">
+                            <h3 class="cost">£18</h3>
+                        </div>
+                    </div>
+
+                    <div class="category__card">
+                        <div class="category__name">
+                            <h2>Lemon posset</h2>
+                            <h3>With shortbread biscuit</h3>
+                        </div>
+                        <div class="category__price">
+                            <h3 class="cost">£22</h3>
+                        </div>
+                    </div>
+
+                    <div class="category__card">
+                        <div class="category__name">
+                            <h2>Chocolate mousse</h2>
+                            <h3>With a hint of chili and a hazelnut tuile</h3>
+                        </div>
+                        <div class="category__price">
+                            <h3 class="cost">£23</h3>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+             <!--ORDER BUTTON-->
+
+            <form>
+                <button class="button button-order" type="submit">Order</button>
+            </form>
+
+            <!--FOOTER-->
+
+            <footer class="footercontent">
+                <h4 class="footercontent__heading">ohmyfood</h4>
+
+                    <ul class="footercontent__list">
+
+                        <div class="footercontent__list--item">
+                            <i class="fa-solid fa-utensils"></i>
+                            <li><a href="#">Suggest a restaurant</a></li>
+                        </div>
+
+                        <div class="footercontent__list--item">
+                            <i class="fa-solid fa-handshake-angle"></i>
+                            <li><a href="#">Become a partner</a></li>
+                        </div>
+
+                        <li><a href="#">Legal notice</a></li>
+
+                        <li><a href="#">Contact</a></li>
+
+                    </ul>
+                </h1>
+
+            </footer>
+
+
+        </main>
+
+    </div>
+</body>
+
+</html>
