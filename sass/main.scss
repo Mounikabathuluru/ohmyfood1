@@ -1,21 +1,11 @@
+@import "/sass/base/base";
 
-@import "./base/variables";
-@import "./base/typography";
-@import "./base/mixins";
+@import "/sass/layout/container";
+@import "/sass/layout/header";
+@import "/sass/layout/footer";
 
-@import "./base/base";
-@import "./layout/container";
+@import "/sass/pages/homepage";
 
-@import "./layout/header";
-@import "./base/location";
+@import "/sass/utils/mixins";
+@import "/sass/utils/variables";
 
-
-@import "./breakpoints/breakpoints";
-@import "./components/buttons";
-@import "./layout/card";
-
-
-@import "./pages/homepage";
-@import "./pages/menu";
-
-@import "./layout/footer";

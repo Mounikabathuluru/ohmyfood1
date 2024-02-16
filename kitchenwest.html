@@ -4,190 +4,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ohmyfood</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300;1,500&
-        family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-        <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./style.css">
+    <title>Ohmyfood</title>
 </head>
 
 <body>
 
-    <div class="main-container">
 
-        <!--header-->
 
-        <nav class="header">
-            <i class="fa-solid fa-arrow-left"></i>
-            <img class=" header__logo" src="./images/logo/ohmyfood.png" alt="Brand Logo">
-        </nav>
-        <main>
-            <img class="kitchenwest" src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+    <!--header-->
+
+    <header class="header header__backarrow">
+        <a href="./index.html">
+            <i class="header__arrow fa-solid fa-arrow-left"></i>
+        </a>
+        <h1 class="header__logo">ohmyfood</h1>
+    </header>
+
+
+    <main>
+
+        <div class="main-container">
+            <img class="heroimg" src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                 alt="Kitchen west">
+
+            <!--title-->
 
             <div class="menu">
 
-                <!--title-->
-
-                <div class="menu__title">
-                    <h4>Kitchen West</h4>
-                    <i class="fa-solid fa-heart heart-gradient"></i>
+                <div class="menu__header">
+                    <h2 class="menu__title">Kitchen West</h2>
+                    <button class="menu__button">
+                        <i class="menu__like menu__like--noBg far fa-heart fa-2x"></i>
+                        <i class="menu__like menu__like--bg fas fa-heart fa-2x"></i>
+                    </button>
                 </div>
 
                 <!--starters-->
+                <div class="categories">
 
-                <div class="category">
-                    <h3 class="category__heading">STARTERS</h3>
-
-                    <div class="category__card">
-                        <div class="category__name">
-                            <h2>Smoked salmon</h2>
-                            <h3>With beetroot and horseradish dressing</h3>
-                        </div>
-                        <div class="category__price">
-                            <h3 class="cost">£25</h3>
-                        </div>
-                    </div>
-
-                    <div class="category__card">
-                        <div class="category__name">
-                            <h2>Ham hock terrine</h2>
-                            <h3>With piccalilli</h3>
-                        </div>
-                        <div class="category__price">
-                            <h3 class="cost">£35</h3>
-                        </div>
-                    </div>
-
-                    <div class="category__card">
-                        <div class="category__name">
-                            <h2>Poached egg</h2>
-                            <h3>With asparagus and hollandaise</h3>
-                        </div>
-                        <div class="category__price">
-                            <h3 class="cost">£20</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <!--mains-->
-
-                <div class="category">
-                    <h3 class="category_heading">MAINS</h3>
-
-                    <div class="category__card">
-                        <div class="category__name">
-                            <h2>Beef fillet with herb butter</h2>
-                            <h3>Served with a vegetable medley</h3>
-                        </div>
-                        <div class="category__price">
-                            <h3 class="cost">£40</h3>
-                        </div>
-                    </div>
-
-                    <div class="category__card">
-                        <div class="category__name">
-                            <h2>Braised oxtail cottage pie</h2>
-                            <h3>With black truffle and parsnip puree</h3>
-                        </div>
-                        <div class="category__price">
-                            <h3 class="cost">£35</h3>
-                        </div>
-                    </div>
-
-                    <div class="category__card">
-                        <div class="category__name">
-                            <h2>Fillet of turbot</h2>
-                            <h3>With citrus dressing</h3>
-                        </div>
-                        <div class="category__price">
-                            <h3 class="cost">£44</h3>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!--desserts-->
-
-                <div class="category">
-                    <h3 class="category_heading">DESSERTS</h3>
-
-                    <div class="category__card">
-                        <div class="category__name">
-                            <h2>Treacle tart</h2>
-                            <h3>With Cornish clotted cream</h3>
-                        </div>
-                        <div class="category__price">
-                            <h3 class="cost">£18</h3>
-                        </div>
-                    </div>
-
-                    <div class="category__card">
-                        <div class="category__name">
-                            <h2>Lemon posset</h2>
-                            <h3>With shortbread biscuit</h3>
-                        </div>
-                        <div class="category__price">
-                            <h3 class="cost">£22</h3>
-                        </div>
-                    </div>
-
-                    <div class="category__card">
-                        <div class="category__name">
-                            <h2>Chocolate mousse</h2>
-                            <h3>With a hint of chili and a hazelnut tuile</h3>
-                        </div>
-                        <div class="category__price">
-                            <h3 class="cost">£23</h3>
-                        </div>
-                    </div>
+                    <section class="category">
 
 
+                        <h3 class="category__heading">STARTERS</h3>
+                        <!--dish1-->
+                        <section class="menuitem delay-0">
+                            <div class="menuitem__name">
+                                <h4 class="menuitem__title">Smoked salmon</h4>
+                                <p class="menuitem__description">With beetroot and horseradish dressing</p>
+                            </div>
+
+                            <div class="menuitem__price">£25</div>
+
+                            <!--
+
+                            <div class="menuitem__confirmation">
+                                <div class="menuitem__wrapicon">
+                                  <i class="menuitem__icon fas fa-check"></i>
+                                </div>
+                              </div>
+
+                              -->
+                        </section>
+
+                        <!--dish2-->
+                        <section class="menuitem delay-0">
+                            <div class="menuitem__name">
+                                <h4 class="menuitem__title">Smoked salmon</h4>
+                                <p class="menuitem__description">With beetroot and horseradish dressing</p>
+                            </div>
+
+                            <div class="menuitem__price">£25</div>
+
+                            <div class="menuitem__confirmation">
+                                <div class="menuitem__wrapicon">
+                                  <i class="menuitem__icon fas fa-check"></i>
+                                </div>
+                              </div>
+
+                              
+                        </section>
+
+
+                        <!--dish3-->
+
+                        <section class="menuitem delay-0">
+                            <div class="menuitem__name">
+                                <h4 class="menuitem__title">Smoked salmon</h4>
+                                <p class="menuitem__description">With beetroot and horseradish dressing</p>
+                            </div>
+
+                            <div class="menuitem__price">£25</div>
+
+                            <div class="menuitem__confirmation">
+                                <div class="menuitem__wrapicon">
+                                  <i class="menuitem__icon fas fa-check"></i>
+                                </div>
+                              </div>
+
+                            
+                        </section>
+
+                    </section>
+
+                    <!--mains-->
+
+                    <section class="category">
+
+
+                        <h3 class="category__heading">STARTERS</h3>
+                        <!--dish1-->
+                        <section class="menuitem delay-0">
+                            <div class="menuitem__name">
+                                <h4 class="menuitem__title">Smoked salmon</h4>
+                                <p class="menuitem__description">With beetroot and horseradish dressing</p>
+                            </div>
+
+                            <div class="menuitem__price">£25</div>
+
+                            
+                            <div class="menuitem__confirmation">
+                                <div class="menuitem__wrapicon">
+                                  <i class="menuitem__icon fas fa-check"></i>
+                                </div>
+                              </div>
+
+                    
+                        </section>
+
+                        <!--dish2-->
+                        <section class="menuitem delay-0">
+                            <div class="menuitem__name">
+                                <h4 class="menuitem__title">Smoked salmon</h4>
+                                <p class="menuitem__description">With beetroot and horseradish dressing</p>
+                            </div>
+
+                            <div class="menuitem__price">£25</div>
+
+                            <div class="menuitem__confirmation">
+                                <div class="menuitem__wrapicon">
+                                  <i class="menuitem__icon fas fa-check"></i>
+                                </div>
+                              </div>
+                        </section>
+
+
+                        <!--dish3-->
+
+                        <section class="menuitem delay-0">
+                            <div class="menuitem__name">
+                                <h4 class="menuitem__title">Smoked salmon</h4>
+                                <p class="menuitem__description">With beetroot and horseradish dressing</p>
+                            </div>
+
+                            <div class="menuitem__price">£25</div>
+
+                        
+                            <div class="menuitem__confirmation">
+                                <div class="menuitem__wrapicon">
+                                  <i class="menuitem__icon fas fa-check"></i>
+                                </div>
+                              </div>
+
+                          
+                        </section>
+
+                    </section>
+
+                    <!--desserts-->
+
+                    <section class="category">
+
+
+                        <h3 class="category__heading">STARTERS</h3>
+                        <!--dish1-->
+                        <section class="menuitem delay-0">
+                            <div class="menuitem__name">
+                                <h4 class="menuitem__title">Smoked salmon</h4>
+                                <p class="menuitem__description">With beetroot and horseradish dressing</p>
+                            </div>
+
+                            <div class="menuitem__price">£25</div>
+
+                       
+
+                            <div class="menuitem__confirmation">
+                                <div class="menuitem__wrapicon">
+                                  <i class="menuitem__icon fas fa-check"></i>
+                                </div>
+                              </div>
+
+                          
+                        </section>
+
+                        <!--dish2-->
+                        <section class="menuitem delay-0">
+                            <div class="menuitem__name">
+                                <h4 class="menuitem__title">Smoked salmon</h4>
+                                <p class="menuitem__description">With beetroot and horseradish dressing</p>
+                            </div>
+
+                            <div class="menuitem__price">£25</div>
+
+                           
+                            <div class="menuitem__confirmation">
+                                <div class="menuitem__wrapicon">
+                                  <i class="menuitem__icon fas fa-check"></i>
+                                </div>
+                              </div>
+
+                        </section>
+
+
+                        <!--dish3-->
+
+                        <section class="menuitem delay-0">
+                            <div class="menuitem__name">
+                                <h4 class="menuitem__title">Smoked salmon</h4>
+                                <p class="menuitem__description">With beetroot and horseradish dressing</p>
+                            </div>
+
+                            <div class="menuitem__price">£25</div>
+
+
+                            <div class="menuitem__confirmation">
+                                <div class="menuitem__wrapicon">
+                                  <i class="menuitem__icon fas fa-check"></i>
+                                </div>
+                              </div>
+
+                              
+                        </section>
+
+                    </section>
                 </div>
             </div>
 
-             <!--ORDER BUTTON-->
+            <!--ORDER BUTTON-->
 
-            <form>
-                <button class="button button-order" type="submit">Order</button>
-            </form>
+            <div class="order">
+                <button class="button-order" type="submit">Order</button>
+            </div>
 
             <!--FOOTER-->
 
-            <footer class="footercontent">
-                <h4 class="footercontent__heading">ohmyfood</h4>
+            <footer class="footer">
 
-                    <ul class="footercontent__list">
+                <span class="footer__heading">ohmyfood</span>
 
-                        <div class="footercontent__list--item">
-                            <i class="fa-solid fa-utensils"></i>
-                            <li><a href="#">Suggest a restaurant</a></li>
-                        </div>
+                <ul class="footer__list">
 
-                        <div class="footercontent__list--item">
-                            <i class="fa-solid fa-handshake-angle"></i>
-                            <li><a href="#">Become a partner</a></li>
-                        </div>
+                    <li class="footer__item">
 
-                        <li><a href="#">Legal notice</a></li>
+                        <a class="footer__link" href="#">
+                            <i class="footer__icon fa-solid fa-utensils"></i>
+                            Suggest a restaurant
+                        </a>
+                    </li>
 
-                        <li><a href="#">Contact</a></li>
+                    <li class="footer__item">
 
-                    </ul>
-                </h1>
+                        <a class="footer__link" href="#">
+                            <i class="footer__icon fa-solid fa-handshake-angle"></i>
+                            Become a partner
+                        </a>
+                    </li>
+
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Legal notice</a>
+                    </li>
+
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Contact</a>
+                    </li>
+
+                </ul>
+
 
             </footer>
+        </div>
+
+    </main>
 
 
-        </main>
-
-    </div>
 </body>
 
 </html>
