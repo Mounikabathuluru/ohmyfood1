@@ -1,3 +1,6 @@
+@use "./mixins";
+@use "./variables";
+
 .header {
     &--menupage {
         position: relative;
@@ -39,7 +42,8 @@
 
         display: flex;
         justify-content: center;
-        gap: 20px; /////
+        align-items: center;
+        gap: 60px; /////
         padding: 20px 40px 0px 20px;
     }
 
@@ -123,13 +127,13 @@
         position: relative;
 
         &::after {
-            width: 30px;
+            width: 50px;
             background-color: $colour-teritiary;
             position: absolute;
             height: 3px;
             content: "";
-            bottom: 0px;
-            top: 0px;
+            left: 0px;
+            top: 40px;
         }
     }
 }
