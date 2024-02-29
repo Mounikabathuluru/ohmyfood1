@@ -1,6 +1,9 @@
 @use "./mixins";
 @use "./variables";
 
+@use "./mixins";
+@use "./variables";
+
 .header {
     &--menupage {
         position: relative;
@@ -50,6 +53,8 @@
 
         display: flex;
         justify-content: center;
+        align-items: center;
+        gap: 60px; /////
         align-items: center;
         gap: 60px; /////
         padding: 20px 40px 0px 20px;
@@ -147,6 +152,7 @@
         position: relative;
 
         &::after {
+            width: 50px;
             width: 50px;
             background-color: $colour-teritiary;
             position: absolute;
