@@ -1,20 +1,9 @@
-@keyframes loader {
-  100% {
-    opacity: 0px;
-  }
-}
-@keyframes jump {
+@keyframes spin {
   0% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(0.5rem);
-  }
-  75% {
-    transform: translateY(-0.5rem);
+    transform: rotate(0deg);
   }
   100% {
-    transform: translateY(0);
+    transform: rotate(360deg);
   }
 }
 body, html {
@@ -47,6 +36,15 @@ body, html {
   background-color: #353535;
   padding: 20px 20px 20px 20px;
 }
+@media (min-width: 1024px) {
+  .footer {
+    display: flex;
+    gap: 80px;
+    align-items: flex-end;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+  }
+}
 .footer__logo {
   color: white;
   font-family: "Shrikhand", "cursive";
@@ -59,8 +57,15 @@ body, html {
   padding: 0px;
   margin: 0px;
 }
+@media (min-width: 1024px) {
+  .footer__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
 .footer__item {
-  margin: 8px 0px;
+  margin: 8px 16px;
 }
 .footer__item:first-child {
   margin-top: 0px;
@@ -77,34 +82,28 @@ body, html {
   margin-right: 8px;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 200;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  background-color: white;
-  animation: loader 0.01s;
-  animation-delay: 1.5s;
+  border: 6px solid #F6F6F6;
+  border-radius: 50%;
+  border-top: 6px solid #9356DC;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  animation-delay: 1s;
   animation-fill-mode: both;
-}
-.loader__item {
-  animation-iteration-count: 1;
-  animation-delay: 0.5s;
-  animation: jump 0.5s;
-  width: 12px;
-  height: 12px;
-  border-radius: 12px;
-}
-
-.loader__items {
+  z-index: 500;
   display: flex;
-  justify-content: space-between;
-  width: 100px;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
 }
 
 .location {
@@ -166,11 +165,14 @@ body, html {
   list-style: none;
   counter-reset: completelist;
   margin: 0px;
-  padding: 0px;
+  padding: 20px;
 }
 @media (min-width: 1024px) {
   .howitworks__steps {
     display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 .howitworks__step {
@@ -178,9 +180,15 @@ body, html {
   position: relative;
   border-radius: 18px;
   background-color: #F6F6F6;
-  margin: 0px 12px 0px 12px;
+  margin: 12px 12px 0px 12px;
   padding: 24px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
+}
+@media (min-width: 1024px) {
+  .howitworks__step {
+    width: 100%;
+    margin: 0px 12px 0px 12px;
+  }
 }
 .howitworks__step__text {
   padding: 0px;
@@ -218,6 +226,10 @@ body, html {
 .howitworks__icon {
   color: #7E7E7E;
   margin-right: 16px;
+}
+
+.fa-store {
+  color: #9356DC;
 }
 
 .restaurants {
@@ -286,14 +298,14 @@ body, html {
   width: 22px;
   height: 22px;
   background-color: transparent;
-  border: 0px;
+  border: transparent solid 0px;
   padding: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .card__like {
-  background-color: linear-gradient(#9356DC, #FF79DA);
+  background-color: #FFFFFF !important;
 }
 
 .header--menupage {
@@ -316,9 +328,8 @@ body, html {
 .image {
   object-fit: cover;
   width: 100%;
-  min-height: 275px;
+  max-width: 100%;
   max-height: 400px;
-  object-fit: cover;
 }
 
 .menu {
@@ -327,6 +338,14 @@ body, html {
   position: relative;
   z-index: 5;
   margin-top: -40px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .menu {
+    padding: 0px 150px;
+  }
 }
 .menu__header {
   display: flex;
@@ -342,56 +361,67 @@ body, html {
   align-items: center;
 }
 .menu__button {
-  width: 22px;
-  height: 22px;
+  width: 33px;
+  height: 33px;
   background-color: transparent;
-  border: 0px;
+  border: transparent 0px solid;
   padding: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  background-color: black;
+  cursor: pointer;
 }
 .menu__button:hover::before {
   opacity: 1;
 }
 .menu__button::before {
-  transition: 0.3s;
-  background: linear-gradient(#9356DC, #FF79DA);
-  width: 100%;
+  opacity: 0px;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
-  opacity: 0;
+  width: 100%;
+  background: linear-gradient(#9356DC, #FF79DA);
 }
 .menu__like {
-  width: 100%;
+  transition-duration: 0.25s;
+  background-color: #F6F6F6;
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #F6F6F6;
-  transition-duration: 0.3s;
+  mix-blend-mode: lighten;
 }
 .menu__button:hover .menu__like--nobg {
   opacity: 0;
 }
 
 .categories {
-  display: flex;
+  width: 100%;
 }
 @media (min-width: 1024px) {
   .categories {
-    max-width: 640px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
+    width: 100%;
   }
 }
 
 .category {
   overflow: hidden;
-  padding: 20px;
-  max-width: 100%;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
 }
 .category__heading {
   font-weight: normal;
@@ -406,7 +436,7 @@ body, html {
   height: 3px;
   content: "";
   left: 0px;
-  top: 40px;
+  bottom: 0px;
 }
 
 .item {
@@ -414,37 +444,50 @@ body, html {
   border-radius: 16px;
   background-color: #FFFFFF;
   padding: 16px;
-  margin: auto;
-  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.15);
+  margin: 12px 0px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.08);
   cursor: pointer;
   max-width: 100%;
   overflow: hidden;
+  column-gap: 5px;
 }
 .item__name {
   flex: 1;
 }
 .item__title {
   margin: 0px;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .item__description {
   margin: 0px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .item__price {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   font-weight: bold;
+  margin-right: 10px;
 }
 .item__confirm {
-  width: 60px;
+  width: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   transition-duration: 0.3s;
   background-color: #99E2D0;
+  margin: -16px -100px -16px 0px;
+}
+.item:hover .item__confirm {
+  margin-right: -36px;
 }
 .item__add {
-  transform: rotate(360deg);
+  transform: rotate(180deg);
   transition-duration: 0.3s;
   border-radius: 50px;
   background-color: #FFFFFF;
@@ -469,6 +512,7 @@ body, html {
 
 .button-order {
   cursor: pointer;
+  width: 180px;
   border-radius: 50px;
   font-size: 18px;
   font-weight: 500;

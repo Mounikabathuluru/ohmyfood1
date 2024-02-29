@@ -3,6 +3,14 @@
 .footer {
     background-color: #353535;
     padding: 20px 20px 20px 20px;
+
+    @media (min-width:1024px){
+      display: flex;
+    gap: 80px;
+     align-items: flex-end;
+     flex-wrap: wrap-reverse;
+     flex-direction: row-reverse;
+    }
     
     &__logo {
       color: white;
@@ -10,16 +18,24 @@
       margin: 0px;
       font-size: 18px;
       margin-bottom: 16px;
+      
     }
   
     &__list {
       list-style: none;
       padding: 0px;
       margin: 0px;
+
+      @media (min-width:1024px){
+        display: flex;
+       justify-content:space-around;
+       align-items:baseline;
+
+      }
     }
   
     &__item {
-      margin: 8px 0px;
+      margin: 8px 16px;
   
       &:first-child {
         margin-top: 0px;
