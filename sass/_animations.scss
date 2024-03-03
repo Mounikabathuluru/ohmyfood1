@@ -1,7 +1,19 @@
-
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-
+@keyframes load-spinner {
+  0% {
+    transform: rotate(0deg);
+   }
+  75% {
+    opacity: 0.75;
+   }
+  100% {
+    transform: rotate(2turn);
+    opacity: 0;
+   }
+}
+@keyframes load-background {
+  0%, 100% {
+      transform: scale(1);
+      height: 100vh;
+      width: 100vw;
+    }
 }
